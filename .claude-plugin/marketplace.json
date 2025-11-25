@@ -1,0 +1,13 @@
+{
+  "name": "ProcessCube.Claude.Development.Marketplace",
+  "owner": {
+    "name": "ProcessCube UG"
+  },
+  "plugins": [
+    {
+      "name": "processcube-release",
+      "source": "../plugins/processcube-release",
+      "description": "Release management for ProcessCube components with GitFlow and semver support"
+    }
+  ]
+}
