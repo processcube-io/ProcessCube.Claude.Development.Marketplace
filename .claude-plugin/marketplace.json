@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "processcube-release",
-      "source": "../plugins/processcube-release",
+      "source": "./../plugins/processcube-release",
       "description": "Release management for ProcessCube components with GitFlow and semver support"
     }
   ]
