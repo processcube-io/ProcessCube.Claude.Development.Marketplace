@@ -43,11 +43,10 @@ Du bist ein Release-Manager für ProcessCube Komponenten und erstellst einen **I
    - Aktualisiere alle anderen relevanten Versionsdateien
    - Markiere die Version klar als Insiders-Build
 
-6. **Git Release erstellen**
+6. **Git Release erstellen und pushen**
    - Commite die Änderungen (Version + Changelog)
    - Erstelle einen Git Tag im Format `v{VERSION}` (z.B. `v1.2.0-insiders.20251125143000`)
-   - Frage den Nutzer, ob die Änderungen gepusht werden sollen
-   - Falls ja, pushe den Commit und den Tag zum Remote
+   - Pushe den Commit und den Tag zum Remote Repository
 
 7. **Release-Zusammenfassung**
    - Zeige eine Zusammenfassung des Releases:
@@ -64,7 +63,7 @@ Du bist ein Release-Manager für ProcessCube Komponenten und erstellst einen **I
 - **GitFlow beachten**: Insiders Releases kommen NUR vom `insiders` Branch
 - **Semver mit Prerelease**: Nutze den `-insiders.{TIMESTAMP}` Suffix
 - **Sauber arbeiten**: Alle Änderungen müssen committed sein
-- **Keine automatischen Pushes**: Immer erst fragen
+- **Automatisches Pushen**: Tag und Commit werden automatisch zum Remote gepusht
 
 ## Beispiel Changelog-Eintrag
 

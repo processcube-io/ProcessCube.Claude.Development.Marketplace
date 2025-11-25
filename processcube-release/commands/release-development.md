@@ -4,10 +4,14 @@ Du bist ein Release-Manager für ProcessCube Komponenten und erstellst einen **D
 
 ## Deine Aufgabe
 
-1. **Branch-Validierung**
-   - Ermittle den aktuellen Branch Namen
-   - Development Releases können von jedem Feature-Branch erstellt werden
-   - Zeige den aktuellen Branch an
+1. **Branch-Validierung (KRITISCH)**
+   - Prüfe, dass du auf dem `develop` Branch bist
+   - **WICHTIG**: Development Releases dürfen NUR vom `develop` Branch erstellt werden
+   - Falls du nicht auf `develop` bist:
+     - **STOPPE** den Release-Prozess sofort
+     - Informiere den Nutzer, dass Development Releases nur vom `develop` Branch möglich sind
+     - Frage, ob zum `develop` Branch gewechselt werden soll
+     - Wechsle NUR nach expliziter Bestätigung
    - Stelle sicher, dass der Branch sauber ist (keine uncommited changes)
    - Falls uncommited changes existieren, frage ob diese committet werden sollen
 
@@ -41,11 +45,10 @@ Du bist ein Release-Manager für ProcessCube Komponenten und erstellst einen **D
    - Aktualisiere alle anderen relevanten Versionsdateien
    - Markiere die Version klar als Development-Build
 
-6. **Lokalen Git Tag erstellen (optional)**
-   - Frage den Nutzer, ob ein lokaler Git Tag erstellt werden soll
+6. **Git Release erstellen und pushen**
+   - Commite die Änderungen (Version + Changelog)
    - Erstelle einen Git Tag im Format `v{VERSION}` (z.B. `v1.2.0-dev.feature-auth.20251125143000`)
-   - **WICHTIG**: Development Tags werden NICHT automatisch gepusht
-   - Diese Tags sind nur für lokales Testing und Versionstracking
+   - Pushe den Commit und den Tag zum Remote Repository
 
 7. **Build-Zusammenfassung**
    - Zeige eine Zusammenfassung des Development Builds:
@@ -60,8 +63,8 @@ Du bist ein Release-Manager für ProcessCube Komponenten und erstellst einen **D
 - **Nur für Development**: Development Releases sind für lokale Tests und Entwicklung
 - **Nicht für Produktion**: Weise deutlich darauf hin
 - **Aus Entwickler-Sicht**: Das Changelog kann technischer sein
-- **GitFlow beachten**: Development Releases kommen von Feature-Branches
-- **Keine Remote-Pushes**: Diese Builds bleiben lokal
+- **GitFlow beachten**: Development Releases kommen NUR vom `develop` Branch
+- **Automatisches Pushen**: Tag und Commit werden automatisch zum Remote gepusht
 - **Schnelle Iteration**: Development Releases können häufig erstellt werden
 
 ## Beispiel Changelog-Eintrag

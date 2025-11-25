@@ -43,11 +43,10 @@ Du bist ein Release-Manager für ProcessCube Komponenten und erstellst einen **s
    - Aktualisiere `package.json` (falls vorhanden)
    - Aktualisiere alle anderen relevanten Versionsdateien
 
-6. **Git Release erstellen**
+6. **Git Release erstellen und pushen**
    - Commite die Änderungen (Version + Changelog)
    - Erstelle einen Git Tag im Format `v{VERSION}` (z.B. `v1.2.0`)
-   - Frage den Nutzer, ob die Änderungen gepusht werden sollen
-   - Falls ja, pushe den Commit und den Tag zum Remote
+   - Pushe den Commit und den Tag zum Remote Repository
 
 7. **Release-Zusammenfassung**
    - Zeige eine Zusammenfassung des Releases:
@@ -62,7 +61,7 @@ Du bist ein Release-Manager für ProcessCube Komponenten und erstellst einen **s
 - **GitFlow beachten**: Stable Releases kommen immer vom `main` Branch
 - **Semver einhalten**: Versionierung muss Semantic Versioning folgen
 - **Sauber arbeiten**: Alle Änderungen müssen committed sein, bevor der Release erstellt wird
-- **Keine automatischen Pushes**: Immer erst fragen, bevor zum Remote gepusht wird
+- **Automatisches Pushen**: Tag und Commit werden automatisch zum Remote gepusht
 
 ## Beispiel Changelog-Eintrag
 
