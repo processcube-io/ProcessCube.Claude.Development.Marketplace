@@ -6,20 +6,8 @@
     "name": "ProcessCube UG"
   },
   "commands": [
-    {
-      "name": "release-stable",
-      "description": "Create a stable release from the main branch following semver",
-      "prompt": "./commands/release-stable.md"
-    },
-    {
-      "name": "release-insiders",
-      "description": "Create an insiders release from the develop branch",
-      "prompt": "./commands/release-insiders.md"
-    },
-    {
-      "name": "release-development",
-      "description": "Create a development release from the current feature branch",
-      "prompt": "./commands/release-development.md"
-    }
+    "./commands/release-stable.md",
+    "./commands/release-insiders.md",
+    "./commands/release-development.md"
   ]
 }
