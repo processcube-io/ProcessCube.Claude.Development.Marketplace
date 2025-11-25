@@ -2,22 +2,24 @@
   "name": "processcube-release",
   "version": "1.0.0",
   "description": "Release management for ProcessCube components with GitFlow and semver support",
-  "author": "ProcessCube UG",
+  "author": {
+    "name": "ProcessCube UG"
+  },
   "commands": [
     {
       "name": "release-stable",
       "description": "Create a stable release from the main branch following semver",
-      "command": "./commands/release-stable.md"
+      "prompt": "./commands/release-stable.md"
     },
     {
       "name": "release-insiders",
       "description": "Create an insiders release from the develop branch",
-      "command": "./commands/release-insiders.md"
+      "prompt": "./commands/release-insiders.md"
     },
     {
       "name": "release-development",
       "description": "Create a development release from the current feature branch",
-      "command": "./commands/release-development.md"
+      "prompt": "./commands/release-development.md"
     }
   ]
 }
